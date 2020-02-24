@@ -1,0 +1,61 @@
+Partie 1:
+
+1.1 :
+A = 3
+B = 4
+
+1.2 :
+A = 2
+B = 3
+C = 1
+
+1.3 :
+A = 6
+B = 2
+
+1.4 :
+A = 13
+B = 13
+C = 13
+
+1.5 :
+A = 2
+B = 2
+
+Oui les deux dernières instructions permettent de changer les valeurs de B et A
+
+1.6 :
+
+A = B
+B = A
+
+1.7 :
+A = C
+C = B
+B = A
+
+1.8 :
+Cela produit une concaténation ("42312")
+
+1.9 :
+Ca vérifie que les variables A et B valent toutes les deux true
+
+
+Partie 2 :
+
+2.1
+Val = 231
+Double = 462
+
+2.2 :
+var number = prompt('choisissez un nombre');
+var carre = number * number
+echo carre
+
+2.3 :
+var variante1 = "belle marquise, vos beaux yeux me font mourir d’amour"
+var variante2 = "jolie marquise, vos beaux yeux me font mourir d’amour"
+var variante3 = "belle marquise, vos jolie yeux me font mourir d’amour"
+var variante4 = "jolie marquise, vos jolie yeux me font mourir d’amour"
+
+echo variante1
