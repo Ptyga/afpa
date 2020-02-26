@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="container-fluid">
+    <header>
+        <div class="row">
+            <img src="images/jarditou_logo.jpg" alt="logo jarditou" class="img-fluid col-6">
+            <h3 class="col-6 text-center pt-5">La qualité depuis 70 ans.</h3>
+        </div>
+        <ul class="row col-12 bg-dark m-0">
+            <li><a href="index.html" class="text-white">Accueil</a></li>
+            <li><a href="tableau.html" class="text-white">Tableau</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+            <li><a href="evaluation.html" class="text-white">Evaluation</a></li>
+        </ul>
+        <img src="images/promotion.jpg" alt="promotion jarditou" class="row img-fluid col-12 p-0 m-0">
+    </header>
+
+    <main class="d-flex">
+
+        <section class="col-lg-8 col-lg-6" id="left">
+            <h1>Exercices de l'évaluation Javascript</h1>
+
+            <article class="p-5">
+                <h2 class="text-center pb-5">Exercice 1 : Total d'une commande</h2>
+
+                <div id="exo1"></div>
+
+                <div class="d-flex">
+                    <div class="col-10 text-center">
+                        <label for="pu">Prix unitaire</label>
+                        <input type="text" id="pu">
+    
+                        <label for="qtecom">Quantité commandée</label>
+                        <input type="text" id="qtecom">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success" id="button1">Valider</button>
+                        <input type="reset" class="btn btn-danger" id="button_1" value="Effacer">
+                    </div>
+                </div>
+                
+                
+            </article>
+
+            <article class="p-5">
+                <h2 class="text-center pb-5">Exercice 2 : Somme des entiers inférieurs à N</h2>
+
+                <div id="exo2"></div>
+
+
+                <div class="d-flex">
+                    <div class="col-10 text-center">
+                        <label for="n">Veuillez-renseigner un nombre entier</label>
+                        <input type="text" id="n">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success" id="button2">Valider</button>
+                        <input type="reset" class="btn btn-danger" id="button_2" value="Effacer">
+                    </div>
+                </div>
+            </article>
+
+            <article class="p-5">
+                <h2 class="text-center pb-5">Exercice 3 - Mini et maxi</h2>
+
+                <div id="exo3"></div>
+
+                <div class="d-flex">
+                    <div class="col-10 text-center">
+                        <label for="m">Veuillez-renseigner un nombre</label>
+                        <input type="text" id="m">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success" id="button3">Valider</button>
+                        <input type="reset" class="btn btn-danger" id="button_3" value="Effacer">
+                    </div>
+                </div>
+            </article>
+
+            <article class="p-5">
+                <h2 class="text-center pb-5">Exercice 4 - Calcul du nombre de jeunes, de moyens et de vieux</h2>
+
+                <div id="exo4"></div>
+
+                <div class="d-flex">
+                    <div class="col-10 text-center">
+                        <label for="age">Veuillez-renseigner un nombre</label>
+                        <input type="text" id="age">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success" id="button4">Valider</button>
+                        <input type="reset" class="btn btn-danger" id="button_4" value="Effacer">
+                    </div>
+                </div>                
+            </article>
+
+            <article class="p-5">
+                <h2 class="text-center pb-5">Exercice 5 : Table de multiplication</h2>
+
+                <div id="exo5">
+                    <div class="table-responsive">
+                        <table id="multiple" class="table table-bordered table-hover"></table>
+                    </div>
+                </div>
+
+                <div class="d-flex">
+                    <div class="col-10 text-center">
+                        <label for="table">Veuillez-renseigner la table que vous souhaitez afficher</label>
+                        <input type="text" id="table">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success" id="button5">Valider</button>
+                        <input type="reset" class="btn btn-danger" id="button_5" value="Effacer">
+                    </div>
+                </div>
+            </article>
+
+            <article class="p-5">
+                <h2 class="text-center pb-5">Exercice 6 : Recherche d'un prénom</h2>
+
+                <div id="exo6"></div>
+
+                <div class="d-flex">
+                    <div class="col-10 text-center">
+                        <label for="name">Veuillez-renseigner un nouveau prénom</label>
+                        <input type="text" id="name">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success" id="button6">Valider</button>
+                        <input type="reset" class="btn btn-danger" id="button_6" value="Effacer">
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <aside class="col-lg-4 col-6" id="right">
+            <p>[COLONNE DE DROITE]</p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <ul class="row col-12 bg-dark m-0">
+            <li><a href="#" class="text-white">Mentions légales</a></li>
+            <li><a href="#" class="text-white">Horaires</a></li>
+            <li><a href="#" class="text-white">Plan du site</a></li>
+        </ul>
+    </footer>
+    
+    <script type="text/javascript" src="evaluation.js"></script>
+</body>
+</html>

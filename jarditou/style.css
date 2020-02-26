@@ -1,0 +1,17 @@
+aside {
+    background-color: grey;
+}
+
+ul li {
+    list-style: none;
+    padding: 15px;
+}
+
+table img {
+    width: 100px;
+}
+
+fieldset {
+    border: 2px solid forestgreen;
+    border-radius: 15px;
+}
