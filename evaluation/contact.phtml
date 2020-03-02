@@ -1,37 +1,10 @@
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
-
-<body class="container-fluid">
-    <header>
-        <div class="row">
-            <img src="images/jarditou_logo.jpg" alt="logo jarditou" class="img-fluid col-6">
-            <h3 class="col-6 text-center pt-5">La qualité depuis 70 ans.</h3>
-        </div>
-        <ul class="row col-12 bg-dark m-0">
-            <li><a href="index.html" class="text-white">Accueil</a></li>
-            <li><a href="tableau.html" class="text-white">Tableau</a></li>
-            <li><a href="contact.html" class="text-white">Contact</a></li>
-            <li><a href="evaluation.html" class="text-white">Evaluation</a></li>
-        </ul>
-        <img src="images/promotion.jpg" alt="promotion jarditou" class="row img-fluid col-12 p-0 m-0">
-    </header>
-
-    <main class="d-flex">
+<main class="d-flex">
         <section class="col-lg-8 col-6" id="left">
             <h1 class="text-center">Formulaire</h1>
             <hr>
 
             <div id="send" class="d-none text-success font-weight-bold"></div>
-            <form action="app.php" method="POST" id="form">
+            <form action="formulaire.php" method="POST" id="form">
                 <p>* Ces zones sont obligatoires</p>
             
                 <fieldset class="p-2">
@@ -39,20 +12,20 @@
                     
                     <div class="form-group">
                         <label for="nom">Votre nom* :</label>
-                        <input type="text" id="nom" class="form-control" name="nom" required>
+                        <input type="text" id="nom" class="form-control" name="nom">
                         <div id="error_nom" class="d-none text-danger font-weight-bold"></div>
                     </div>
                     
                     <div class="form-group">
                         <label for="prenom">Votre prenom* :</label>
-                        <input type="text" id="prenom" class="form-control" name="prenom" required>
+                        <input type="text" id="prenom" class="form-control" name="prenom">
                         <div id="error_prenom" class="d-none text-danger font-weight-bold"></div>
                     </div>
             
                     <div class="d-flex" id="sexe">
                         <p class="mr-5">Sexe* :</p>
                         <div class="form-check">
-                            <input type="radio" value="Féminin" class="form-check-input radio" id="feminin" name="sexe" required>
+                            <input type="radio" value="Féminin" class="form-check-input radio" id="feminin" name="sexe">
                             <label for="feminin" class="form-check-label mr-5">Féminin</label>
                         </div>
                         <div class="form-check">
@@ -64,7 +37,7 @@
             
                     <div class="form-group">
                         <label for="date">Date de naissance* :</label>
-                        <input type="date" class="form-control" id="date" name="date" required>
+                        <input type="date" class="form-control" id="date" name="date">
                         <div id="error_date" class="d-none text-danger font-weight-bold"></div>
                     </div>
             
@@ -96,7 +69,7 @@
             
                     <div class="form-group">
                         <label for="sujet">Sujet* :</label>
-                        <select name="sujet" class="custom-select" id="sujet" required>
+                        <select name="sujet" class="custom-select" id="sujet">
                             <option value="commandes">Mes commandes</option>
                             <option value="question">Question sur un produit</option>
                             <option value="réclamation">Réclamation</option>
@@ -106,7 +79,7 @@
             
                     <div class="form-group">
                         <label for="question">Votre question* :</label>
-                        <textarea name="question" class="form-control" id="question" cols="30" rows="2" required></textarea>
+                        <textarea name="question" class="form-control" id="question" cols="30" rows="2"></textarea>
                         <div id="error_question" class="d-none text-danger font-weight-bold"></div>
                     </div>
                 </fieldset>
@@ -128,15 +101,3 @@
             <p>[COLONNE DE DROITE]</p>
         </aside>
     </main>
-
-    <footer>
-        <ul class="row col-12 bg-dark m-0">
-            <li><a href="#" class="text-white">Mentions légales</a></li>
-            <li><a href="#" class="text-white">Horaires</a></li>
-            <li><a href="#" class="text-white">Plan du site</a></li>
-        </ul>
-    </footer>
-    <script type="text/javascript" src="evaluation2.js"></script>
-</body>
-
-</html>

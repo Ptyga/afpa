@@ -1,5 +1,5 @@
 //      EXERCICE 7       //
-
+/*
 document.getElementById("form").addEventListener('click', function () {
     var errors = []
     var nom = document.getElementById("nom").value
@@ -87,4 +87,4 @@ document.getElementById("form").addEventListener('click', function () {
         document.getElementById("send").innerHTML = "<p>Votre formulaire a bien été envoyé !</p>"
         document.getElementById("send").classList.remove("d-none")
     }
-})
+})*/
