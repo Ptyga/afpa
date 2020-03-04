@@ -1,0 +1,22 @@
+ul li {
+    list-style: none;
+    padding: 15px;
+}
+
+table img {
+    width: 100px;
+}
+
+fieldset {
+    border: 2px solid skyblue;
+    border-radius: 15px;
+}
+
+aside .detail {
+    background-color: white;
+}
+
+#id {
+    pointer-events:none;
+    background-color: #ccc;
+  }
