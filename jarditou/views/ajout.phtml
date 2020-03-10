@@ -1,0 +1,123 @@
+<?php
+if (isset($_POST["errors_ajout"]) && !empty($_POST["errors_ajout"])) {
+    $errors_ajout = $_POST["errors_ajout"];
+} else {
+    $errors_ajout = [];
+}
+?>
+
+<main class="d-flex">
+    <section class="col-lg-8 col-lg-6" id="left">
+
+        <form action="ajout_valide.php" method="POST" enctype="multipart/form-data" class="m-3">
+
+            <div class="form-group">
+                <label for="ajout_ref">Référence :</label>
+                <input type="text" id="ajout_ref" class="form-control" name="ajout_ref" value="<?php if (isset($add_ref)) {
+                                                                                                    echo $add_ref;
+                                                                                                }; ?>">
+                <div class="text-center text-danger font-weight-bolder">
+                    <?php if (isset($errors_ajout["ajout_ref"])) {
+                        echo $errors_ajout["ajout_ref"];
+                    } ?>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="ajout_cat">Catégorie :</label>
+
+                <select name="ajout_cat" id="ajout_cat">
+                    <?php foreach ($categories as $categorie) { ?>
+                        <option value="<?php echo $categorie->cat_id; ?>"><?php echo $categorie->cat_nom; ?></option>
+                    <?php } ?>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ajout_lib">Libellé :</label>
+                <input type="text" id="ajout_lib" class="form-control" name="ajout_lib" value="<?php if (isset($add_lib)) {
+                                                                                                    echo $add_lib;
+                                                                                                }; ?>">
+                <div class="text-center text-danger font-weight-bolder">
+                    <?php if (isset($errors_ajout["ajout_lib"])) {
+                        echo $errors_ajout["ajout_lib"];
+                    } ?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ajout_description">Description :</label>
+                <textarea id="ajout_description" class="form-control" name="ajout_description"><?php if (isset($add_description)) {
+                                                                                                    echo $add_description;
+                                                                                                }; ?></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="ajout_prix">Prix :</label>
+                <input type="text" id="ajout_prix" class="form-control" name="ajout_prix" value="<?php if (isset($add_prix)) {
+                                                                                                        echo $add_prix;
+                                                                                                    }; ?>">
+                <div class="text-center text-danger font-weight-bolder">
+                    <?php if (isset($errors_ajout["ajout_prix"])) {
+                        echo $errors_ajout["ajout_prix"];
+                    } ?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ajout_stock">Stock :</label>
+                <input type="text" id="ajout_stock" class="form-control" name="ajout_stock" value="<?php if (isset($add_stock)) {
+                                                                                                        echo $add_stock;
+                                                                                                    }; ?>">
+                <div class="text-center text-danger font-weight-bolder">
+                    <?php if (isset($errors_ajout["ajout_stock"])) {
+                        echo $errors_ajout["ajout_stock"];
+                    } ?>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="ajout_couleur">Couleur :</label>
+                <input type="text" id="ajout_couleur" class="form-control" name="ajout_couleur" value="<?php if (isset($add_couleur)) {
+                                                                                                            echo $add_couleur;
+                                                                                                        }; ?>">
+            </div>
+
+            <div class="form-group">
+                <p><label for="fichier">Photo du produit :</label></p>
+                <input type="file" name="fichier" id="fichier">
+                <div class="text-center text-danger font-weight-bolder">
+                    <?php if (isset($errors_ajout["fichier"])) {
+                        echo $errors_ajout["fichier"];
+                    }
+                    if (isset($errors_ajout["ext"])) {
+                        echo $errors_ajout["ext"];
+                    }?>
+                </div>
+            </div>
+
+            <div class="d-flex" id="product">
+                <p class="mr-5">Produit bloqué :</p>
+                <div class="form-check">
+                    <input type="radio" value="oui" class="form-check-input radio" id="ajout_oui" name="ajout_product" <?php if (isset($bloque) && $bloque == 1) {
+                                                                                                                            echo "checked";
+                                                                                                                        } ?>>
+                    <label for="ajout_oui" class="form-check-label mr-5">Oui</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" value="non" class="form-check-input radio" id="ajout_non" name="ajout_product" <?php if (!isset($bloque) || $bloque == null) {
+                                                                                                                            echo "checked";
+                                                                                                                        } ?>>
+                    <label for="ajout_non" class="form-check-label">Non</label>
+                </div>
+            </div>
+    </section>
+
+    <aside class="col-lg-4 col-6 d-flex flex-column text-center" id="right">
+        <a href="liste.php"><button type="button" class="btn btn-info p-5 m-5">RETOUR</button></a>
+        <div><button type="submit" class="btn btn-success p-5 m-5">AJOUTER LE PRODUIT</button></div>
+    </aside>
+
+
+    </form>
+
+</main>

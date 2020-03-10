@@ -1,0 +1,61 @@
+<main class="d-flex">
+    <section class="col-lg-8 col-lg-6" id="left">
+        <div class="row flex">
+            <div class="col-6 ml-3 mt-5">
+                <?php if (isset($_POST["valide"]) && !empty($_POST["valide"])) { echo $_POST["valide"];} ?>
+
+                <h3>ID :</h3>
+                <p><?php echo $pro_id; ?></p>
+
+                <h3>Référence :</h3>
+                <p><?php echo $produit->pro_ref; ?></p>
+
+                <h3>Catégorie :</h3>
+                <p><?php echo $produit->cat_nom; ?></p>
+
+                <h3>Libellé :</h3>
+                <p><?php echo $produit->pro_libelle; ?></p>
+
+                <h3>Description :</h3>
+                <p><?php echo $produit->pro_description; ?></p>
+
+                <h3>Prix :</h3>
+                <p><?php echo $produit->pro_prix; ?></p>
+
+                <h3>Stock :</h3>
+                <p><?php echo $produit->pro_stock; ?></p>
+
+                <h3>Couleur :</h3>
+                <p><?php echo $produit->pro_couleur; ?></p>
+
+                <div class="d-flex" id="product">
+                    <p class="mr-5">Produit bloqué :</p>
+                    <div class="form-check">
+                        <input disabled type="radio" value="oui" class="form-check-input radio" id="oui" name="product" <?php if ($produit->pro_bloque == 1) { echo "checked";} ?>>
+                        <label for="oui" class="form-check-label mr-5">Oui</label>
+                    </div>
+                    <div class="form-check">
+                        <input disabled type="radio" value="non" class="form-check-input radio" id="non" name="product" <?php if ($produit->pro_bloque == null || $produit->pro_bloque == 0) {echo "checked";} ?>>
+                        <label for="non" class="form-check-label">Non</label>
+                    </div>
+                </div>
+
+                <p>Date d'ajout : <?php $date = $produit->pro_d_ajout; echo date("d/m/Y", strtotime($date)); ?></p>
+                <p>Date de modification : <?php if ($produit->pro_d_modif == null) { echo "Jamais modifié";
+                                                } else { $modif = $produit->pro_d_modif; echo date("d/m/Y H:i", strtotime($modif));} ?></p>
+            </div>
+            <div class="col-5 pt-5 mt-5">
+                <img src="../jarditou_photos/<?php echo $produit->pro_id . '.' . $produit->pro_photo; ?>" class=".img-fluid mw-100 h-auto" />
+            </div>
+        </div>
+    </section>
+
+    <aside class="col-lg-4 col-6 d-flex flex-column text-center" id="right">
+        <a href="liste.php"><button class="btn btn-primary p-5 mt-5">RETOUR</button></a>
+        <a href="modif.php?id=<?php echo $produit->pro_id; ?>"><button class="btn btn-warning p-5 mt-5">MODIFIER</button></a>
+        <a href="delete.php?id=<?php echo $produit->pro_id; ?>" id="delete"><button type="button" class="btn btn-danger p-5 mt-5">SUPPRIMER</button></a>
+    </aside>
+    </form>
+</main>
+
+<script type="text/javascript" src="../views/js/delete.js"></script>
