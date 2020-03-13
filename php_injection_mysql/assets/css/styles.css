@@ -1,0 +1,9 @@
+html 
+{
+   font-size: 100%;
+}
+
+body 
+{
+    font-size: 1rem; /* Si html fixé à 100%, 1rem = 16px = taille par défaut de police de Firefox ou Chrome */
+}
